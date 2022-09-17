@@ -5,7 +5,7 @@ public class BlockChain {
     private ArrayList<Block> blockchain;
     public BlockChain(){
         blockchain = new ArrayList<Block>();
-        blockchain.add(new Block("", "0"));
+        blockchain.add(new Block("0:0", "0"));
     }
 
     public void addBlock(Block newBlock){

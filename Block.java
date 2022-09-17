@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.security.MessageDigest;
 import java.util.Date;
 
@@ -10,7 +9,7 @@ public class Block {
     private int nonce;
 
     public Block(String data, String previousHash) {
-        this.data = data;
+        this.data = applySha256(data.split(":")[0] + Math.random() * 100000000) + ":" + data.split(":")[1];
         this.previousHash = previousHash;
         this.timeStamp = new Date().getTime();
         this.nonce = (int)Math.random() * 1000000;

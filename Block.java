@@ -9,10 +9,10 @@ public class Block {
     private int nonce;
 
     public Block(String data, String previousHash) {
-        this.data = applySha256(data.split(":")[0] + Math.random() * 100000000) + ":" + data.split(":")[1];
+        this.nonce = (int)Math.random() * 1000000;
+        this.data = applySha256(data.split(":")[0]) + ":" + data.split(":")[1];
         this.previousHash = previousHash;
         this.timeStamp = new Date().getTime();
-        this.nonce = (int)Math.random() * 1000000;
         this.hash = calculateHash();
     }
 

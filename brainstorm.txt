@@ -1,0 +1,6 @@
+1000 x 1000 map
+
+ - Convert map array to coords on 1000x1000
+ - calculate distance between us and point
+ - UpdateFrame
+ - 

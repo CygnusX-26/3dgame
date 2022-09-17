@@ -1,1 +1,1 @@
-hih
+console.log('Hello World');

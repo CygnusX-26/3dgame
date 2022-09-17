@@ -16,6 +16,8 @@ public class Main extends JFrame{
     JTextField jt = new JTextField("", 15);
     JButton jb = new JButton("Submit Vote");
     JButton jb2 = new JButton("Tally Votes");
+    JButton jb3 = new JButton("Yes");
+    JButton jb4 = new JButton("No");
     BlockChain blockChain = new BlockChain();
     int yes = 0;
     int no = 0;

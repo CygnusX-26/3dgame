@@ -25,7 +25,6 @@ let ball = function(){
 function setup(){
     createCanvas(windowWidth, windowHeight);
     noStroke();
-    background(0);
     ball1 = new ball();
     ball1.draw()
 }

@@ -6,6 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class GUI extends JFrame{
@@ -13,7 +14,7 @@ public class GUI extends JFrame{
     JLabel jl = new JLabel();
     JLabel jl2 = new JLabel();
     JLabel jl3 = new JLabel();
-    JTextField jt = new JTextField("", 15);
+    JPasswordField jt = new JPasswordField("", 15);
     JButton jb = new JButton("Submit Vote");
     JButton jb2 = new JButton("Tally Votes");
     JButton jb3 = new JButton("Yes");
@@ -30,7 +31,7 @@ public class GUI extends JFrame{
         add(jp);
         jp.setLayout(new BoxLayout(jp, BoxLayout.Y_AXIS));
         jl3.setText("Pineapples belong on pizza.");
-        jl3.setFont(new Font("Serif", Font.PLAIN, 40));
+        jl3.setFont(new Font("Forte", Font.PLAIN, 40));
         jl.setText("Enter your SSN below. Don't worry, it's encrypted.");
         jl2.setText("Chain is valid Yes: " + 0 + " No: " + 0);
         jp.add(new JLabel(new ImageIcon("logo.png")));

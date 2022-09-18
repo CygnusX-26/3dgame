@@ -7,13 +7,12 @@ public class GUI extends JFrame{
     JPanel jp = new JPanel() {
         @Override
         public void paintComponent(Graphics g) {
-        Color blue = new Color(0,0,255);
-        Color green = new Color(0,255,0);
+        Color blue = new Color(65,105,225);
+        Color green = new Color(23,53,24);
         GradientPaint blueToGreen = new GradientPaint(0.0f, 0.0f, blue, 550.0f, 450.0f, green);
         Graphics2D g2d = (Graphics2D) g;
         g2d.setPaint(blueToGreen);
-        g.fillRect(0,0,getWidth(),getHeight());
-        super.paintComponent(g);
+        g2d.fillRect(0,0,getWidth(),getHeight());
     }
     };
 
@@ -31,16 +30,19 @@ public class GUI extends JFrame{
 
     public GUI(){
         super("BlockChain");
-        setSize(550, 450);
+        setSize(570, 490);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
         add(jp);
         jp.setLayout(new BoxLayout(jp, BoxLayout.Y_AXIS));
         jl3.setText("Pineapples belong on pizza.");
         jl3.setFont(new Font("Forte", Font.PLAIN, 40));
         jl.setText("Enter your SSN below. Don't worry, it's encrypted.");
+        jl.setForeground(Color.WHITE);
+        jl2.setForeground(Color.WHITE);
+        jl3.setForeground(Color.WHITE);
         jl2.setText("Chain is valid Yes: " + 0 + " No: " + 0);
         jp.add(new JLabel(new ImageIcon("logo.png")));
+        jt.setBackground(Color.WHITE);
         jp.add(jl3);
         jp.add(jl);
         jp.add(jt);
@@ -48,7 +50,7 @@ public class GUI extends JFrame{
         jp.add(jb4);
         jp.add(jb2);
         jp.add(jl2);
-        
+        setVisible(true);
         jb3.addActionListener(e -> {
             String password = new String(jt.getPassword());
             String ssn = password + ":" + "yes";

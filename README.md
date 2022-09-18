@@ -1,4 +1,5 @@
 # Poll-Digital
+![alt text](https://github.com/CygnusX-26/Poll-Digital/blob/master/logo.png?raw=true)
 ## Why Use Poll-Digital? 
 ---
 > `Votes can be cast virtually`
@@ -22,7 +23,8 @@
 ---
 ## BlockChain
 ---
-> ArrayList of blocks 
+ - ArrayList of blocks 
+
 > isChainValid 
 - > `Checks every hash of every block and makes sure it corresponds to the block's SHA256(previousHash + data + timestamp + nonce)`
 - > `Ensures that no blocks are tampered before votes are counted` 

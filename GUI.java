@@ -1,3 +1,5 @@
+import java.awt.Font;
+
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -22,12 +24,14 @@ public class GUI extends JFrame{
 
     public GUI(){
         super("BlockChain");
-        setSize(500, 425);
+        setSize(550, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         add(jp);
         jp.setLayout(new BoxLayout(jp, BoxLayout.Y_AXIS));
-        jl3.setText("<html>Pineapples belong on pizza.<br/> Enter your SSN and vote. Format: SSN:Vote</html>");
+        jl3.setText("Pineapples belong on pizza.");
+        jl3.setFont(new Font("Serif", Font.PLAIN, 40));
+        jl.setText("Enter your SSN below. Don't worry, it's encrypted.");
         jl2.setText("Chain is valid Yes: " + 0 + " No: " + 0);
         jp.add(new JLabel(new ImageIcon("logo.png")));
         jp.add(jl3);

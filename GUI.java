@@ -32,16 +32,19 @@ public class GUI extends JFrame{
         jp.add(new JLabel(new ImageIcon("logo.png")));
         jp.add(jl3);
         jp.add(jl);
+        jp.add(jt);
         jp.add(jb3);
         jp.add(jb4);
-        jp.add(jt);
-        jp.add(jb);
         jp.add(jb2);
         jp.add(jl2);
         
-        jb.addActionListener(e -> {
-            String ssn = jt.getText();
+        jb3.addActionListener(e -> {
+            String ssn = jt.getText() + ":" + "yes";
             String shaSSN = Block.applySha256(ssn.split(":")[0]);
+            if (ssn.split(":")[0].equals("")){
+                jl2.setText("Invalid input");
+                return;
+            }
             for (Block b : blockChain.getBlockChain()){
                 if (b.getData().split(":")[0].equals(shaSSN)){
                     jl2.setText("You have already voted!");
@@ -50,10 +53,35 @@ public class GUI extends JFrame{
             }
             jt.setText("");
             blockChain.addBlock(new Block(ssn, ""));
-            if(ssn.split(":")[1].equals("yes")){
-                yes++;
-            }else if(ssn.split(":")[1].equals("no")){
-                no++;
+            if (!ssn.split(":")[0].equals("")){
+                yes ++;
+                jl2.setText("Thanks for voting!");
+            }
+            else{
+                jl2.setText("Invalid input");
+            }
+        });
+        jb4.addActionListener(e -> {
+            String ssn = jt.getText() + ":" + "no";
+            String shaSSN = Block.applySha256(ssn.split(":")[0]);
+            if (ssn.split(":")[0].equals("")){
+                jl2.setText("Invalid input");
+                return;
+            }
+            for (Block b : blockChain.getBlockChain()){
+                if (b.getData().split(":")[0].equals(shaSSN)){
+                    jl2.setText("You have already voted!");
+                    return;
+                }
+            }
+            jt.setText("");
+            blockChain.addBlock(new Block(ssn, ""));
+            if (!ssn.split(":")[0].equals("")){
+                jl2.setText("Thanks for voting!");
+                no ++;
+            }
+            else{
+                jl2.setText("Invalid input");
             }
         });
         jb2.addActionListener(e -> {

@@ -9,7 +9,8 @@
 ---
 ## Block 
 ---
-> Each block has the following properties
+Each block has the following properties
+
 > `hash` 
   - Sha256 encoded hash of "previousHash + data + timeStamp + nonce"
 > `previousHash` 

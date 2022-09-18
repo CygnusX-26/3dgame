@@ -61,7 +61,7 @@ public class GUI extends JFrame{
             }
             for (Block b : blockChain.getBlockChain()){
                 if (b.getData().split(":")[0].equals(shaSSN)){
-                    jl2.setText("You have already voted!");
+                    jl2.setText("Thanks for voting!");
                     return;
                 }
             }
@@ -85,7 +85,7 @@ public class GUI extends JFrame{
             }
             for (Block b : blockChain.getBlockChain()){
                 if (b.getData().split(":")[0].equals(shaSSN)){
-                    jl2.setText("You have already voted!");
+                    jl2.setText("Thanks for voting!");
                     return;
                 }
             }

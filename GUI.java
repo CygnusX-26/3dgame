@@ -5,12 +5,14 @@ import java.awt.*;
 
 public class GUI extends JFrame{
     JPanel jp = new JPanel() {
-        protected void paintComponent(Graphics g) {
+        @Override
+        public void paintComponent(Graphics g) {
         Color blue = new Color(0,0,255);
         Color green = new Color(0,255,0);
-        GradientPaint blueToGreen = new GradientPaint(0.0f, 0.0f, blue, 550.0f, 450.0f, green, true);
+        GradientPaint blueToGreen = new GradientPaint(0.0f, 0.0f, blue, 550.0f, 450.0f, green);
         Graphics2D g2d = (Graphics2D) g;
         g2d.setPaint(blueToGreen);
+        g.fillRect(0,0,getWidth(),getHeight());
         super.paintComponent(g);
     }
     };

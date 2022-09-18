@@ -1,5 +1,8 @@
 # Poll-Digital
+
 ![alt text](https://github.com/CygnusX-26/Poll-Digital/blob/master/logo.png?raw=true)
+
+Developed by: Neil Hommes, Chris Lee, Tyler Nguyen
 ## Why Use Poll-Digital? 
 ---
 > `Votes can be cast virtually`
